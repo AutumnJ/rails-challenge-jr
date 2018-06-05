@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  padding: 8px 20px 20px 20px;
+  font-family: Helvetica, arial, sans-serif
+}
+
+.flash-display {
+  width: 95%;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  margin-bottom: 20px
+}
+
+.flash-display span {
+  padding: 10px 10px 6px;
+  display: inline-block;
+}
+
+#message-display {
+  font-family: Menlo, "Courier New", Courier, monospace;
+}
+
+h1 a.logo:visited, h1 a.logo:hover, h1 a.logo {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.text-muted {
+  float: right;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: bold;
+  line-height: 2.5em;
+}
+
+#body-content {
+  border-top: 4px solid #000;
+  border-width: 4px 0;
+  padding: 20px 20px;
+}
+
+.jumbotron {
+  padding-left: 40px;
+}
+
+.table > tbody > tr > th {
+  border-top: none;
+}
+
+.table {
+  margin-bottom: 0px;
+}
+
+#second-td {
+  vertical-align: bottom;
+}
+
+

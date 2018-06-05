@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tmwsd</title>
+    <title>TMWSD</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <table class="table">
+      <tr>
+        <td scope="col"><h1><a href="/" class="logo">TMWSD.</a></h1></td>
+        <td id="second-td" scope="col"><h5 class="text-muted">This Message Will Self-Destruct.</h5></td>
+      </tr>
+    </table>
+
+
+    <div id="body-content">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
+
+

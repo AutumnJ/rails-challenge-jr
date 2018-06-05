@@ -1,0 +1,21 @@
+<%= form_for(@message, :html => {:class => "form-horizontal center", :autocomplete => "off"}) do |f| %>
+      <div class="form-group">
+        <%= f.label :body, "Message:", class: "col-md-4 control-label" %>
+        <div class="col-md-8">
+          <%= f.text_area :body, class: "form-control", cols: "30", rows: "4", maxlength:"200", :required => true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :email, "Email:", class: "col-md-4 control-label" %>
+        <div class="col-md-8">
+          <%= f.text_field :email, class: "form-control", :required => true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, "Password:", class: "col-md-4 control-label" %>
+        <div class="col-md-8">
+          <%= f.text_field :password, type: "password", placeholder: "optional", class: "form-control" %>
+        </div>
+      </div>
+      <%= f.submit "SAVE THIS MESSAGE", class: "btn btn-default btn-primary" %>  
+ <% end %>

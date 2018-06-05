@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1 class="display-4">Snag the URL for your message!</h1>
+  <hr class="my-4">
+  <p>Click the button below to copy your message's URL to your clipboard.</p>
+  <p class="lead">
+    <a id="copy-btn" class="btn btn-primary btn-lg" role="button">COPY TO CLIPBOARD</a>
+  </p>
+</div>
+<script>
+  var button = document.getElementById('copy-btn');
+  button.setAttribute("data-clipboard-text", window.location.origin + "/messages/<%= @message.token %>")
+  new ClipboardJS('#copy-btn');
+</script>
+
+
+

@@ -63,7 +63,7 @@ class MessagesController < ApplicationController
     def message_params
       params.require(:message).permit(
         :body,
-        :email,
+        # :email,
         :password
         )
     end

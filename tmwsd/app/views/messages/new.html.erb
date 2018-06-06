@@ -5,12 +5,8 @@
           <%= f.text_area :body, class: "form-control", cols: "30", rows: "4", maxlength:"200", :required => true %>
         </div>
       </div>
-      <div class="form-group">
-        <%= f.label :email, "Email:", class: "col-md-4 control-label" %>
-        <div class="col-md-8">
-          <%= f.text_field :email, class: "form-control", :required => true %>
-        </div>
-      </div>
+      <!-- Email functionality not currently in use -->
+      <!-- Can add in here to trigger email to user or msg recipient; add library or regex validator -->
       <div class="form-group">
         <%= f.label :password, "Password:", class: "col-md-4 control-label" %>
         <div class="col-md-8">

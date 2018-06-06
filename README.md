@@ -11,7 +11,9 @@ This app is available online at: [https://still-shore-38939.herokuapp.com/](http
 
 ### Future Functionality
 
-* Homepage will accept email (user can input their own or a recipient's) input on form
+* Homepage will accept email input on form (user can input their own or a recipient's) 
 * Email will be validated
 * Email will be triggered with link to message
+
+
 *Model, database and messages controller are set up to accomodate email, form input for email can be added along with trigger email action.*

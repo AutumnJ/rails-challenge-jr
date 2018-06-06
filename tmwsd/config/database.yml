@@ -1,16 +1,20 @@
-development:
+default: &default
+  url: <%= ENV['HEROKU_POSTGRESQL_CYAN_URL'] %>
   adapter: postgresql
-  database: tmwsd_development
-  pool: 5
-  timeout: 5000
-test:
-  adapter: postgresql
-  database: tmswd_test
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
   timeout: 5000
 
+development:
+  <<: *default
+  database: tmwsd_development
+
+test:
+  <<: *default
+  database: tmwsd_test
+
 production:
-  adapter: postgresql
-  database: tmswd_production
-  pool: 5
-  timeout: 500
+  <<: *default
+  database: tmwsd_production

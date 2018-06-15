@@ -1,7 +1,5 @@
 class MessagesController < ApplicationController
 
-  require 'securerandom'
-
   before_action :find_message, only: [:verify_password, :show, :authenticate]
 
   def new
@@ -10,7 +8,6 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(message_params)
-    @message.token = SecureRandom.hex(10)
 
     if @message.save
       render :dashboard
@@ -26,10 +23,6 @@ class MessagesController < ApplicationController
     else
       redirect_to "/messages/#{@message.token}/authenticate"
     end
-  end
-
-  def index
-    redirect_to new_message_path
   end
 
   def authenticate
